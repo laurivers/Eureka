@@ -472,7 +472,7 @@ public final class LocationRow : SelectorRow<CLLocation, PushSelectorCell<CLLoca
             fmt.minimumFractionDigits = 4
             let latitude = fmt.stringFromNumber(location.coordinate.latitude)!
             let longitude = fmt.stringFromNumber(location.coordinate.longitude)!
-            return  "\(latitude), \(longitude)"
+            return  "\(latitude), \(longitude)as;ldkfjasldfkjas;ldfkjas;dlfkja"
         }
     }
 }
