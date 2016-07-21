@@ -78,8 +78,9 @@ public class BaseCell : UITableViewCell, BaseCellType {
         detailLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addConstraint(NSLayoutConstraint(item: detailLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0))
         view.addConstraint(NSLayoutConstraint(item: detailLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 110))
-        view.addConstraint(NSLayoutConstraint(item: detailLabel, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1, constant: 35))
+        view.addConstraint(NSLayoutConstraint(item: detailLabel, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1, constant: 0))
         detailLabel.textAlignment = .Left
+        detailLabel.lineBreakMode = .ByTruncatingTail
     }
     
     /**
