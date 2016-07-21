@@ -233,7 +233,12 @@ class RowsExampleViewController: FormViewController {
                 <<< LocationRow(){
                         $0.title = "LocationRow"
                         $0.value = CLLocation(latitude: -34.91, longitude: -56.1646)
-                    }
+                    }.cellUpdate({ (cell, row) in
+                        let label = UILabel()
+                        label.text = "万"
+                        label.sizeToFit()
+                        cell.accessoryView = label
+                    })
                 
                 <<< ImageRow(){
                         $0.title = "ImageRow"
