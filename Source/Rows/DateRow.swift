@@ -28,7 +28,7 @@ open class _DateRow: _DateFieldRow {
         super.init(tag: tag)
         dateFormatter = DateFormatter()
         dateFormatter?.timeStyle = .none
-        dateFormatter?.dateStyle = .medium
+        dateFormatter?.dateFormat = "yyyy-MM-dd"
         dateFormatter?.locale = Locale.current
     }
 }

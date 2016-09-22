@@ -60,6 +60,20 @@ open class BaseCell : UITableViewCell, BaseCellType {
     open func update() {}
 
     open func didSelect() {}
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        guard let detailLabel = detailTextLabel, let view = detailTextLabel?.superview else {
+            return
+        }
+        detailLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addConstraint(NSLayoutConstraint(item: detailLabel, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: detailLabel, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 110))
+//        view.addConstraint(NSLayoutConstraint(item: detailLabel, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: -8))
+        detailLabel.textAlignment = .left
+        detailLabel.lineBreakMode = .byTruncatingTail
+    }
+
 
     /**
      If the cell can become first responder. By default returns false

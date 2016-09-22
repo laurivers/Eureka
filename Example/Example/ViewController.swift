@@ -412,8 +412,8 @@ class FieldRowCustomizationController : FormViewController {
             
                 <<< NameRow() {
                     $0.title = "Title"
-                    $0.textFieldPercentage = 0.6
-                    $0.placeholder = "textFieldPercentage = 0.6"
+                    $0.textFieldLeftConst = 110
+                    $0.placeholder = "textFieldLeftConst = 110"
                 }
                 .cellUpdate {
                     $1.cell.textField.textAlignment = .left
@@ -556,6 +556,7 @@ class NativeEventFormViewController : FormViewController {
         form =
             
                 TextRow("Title").cellSetup { cell, row in
+                    
                     cell.textField.placeholder = row.tag
                 }
             
